@@ -2,7 +2,7 @@ spring:
   application:
     name: msavaliadorcredito
   rabbitmq:
-    host: localhost
+    host: ${RABBITMQ_SERVER}
     port: 5672
     username: guest
     password: guest
@@ -13,10 +13,20 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@localhost:8761/eureka
+      defaultZone: http://cursoms-eureka-user:ecok-usr-eeuramssur@${EUREKA_SERVER}:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 mq:
   queues:
     emissao-cartoes: emissao-cartoes
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  file:
+    name: ./logs/log-file.log
