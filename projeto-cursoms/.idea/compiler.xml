@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eurekaserver" />
+        <module name="mscartoes" />
+        <module name="mscloudgateway" />
+        <module name="msclientes" />
+        <module name="msavaliadorcredito" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eurekaserver" options="-parameters" />
+      <module name="msavaliadorcredito" options="-parameters" />
+      <module name="mscartoes" options="-parameters" />
+      <module name="msclientes" options="-parameters" />
+      <module name="mscloudgateway" options="-parameters" />
+    </option>
+  </component>
+</project>
